@@ -1,4 +1,5 @@
 ﻿#include "AppDeleGate.h"
+#include "UserGuideScene.h"
 
 AppDeleGate::AppDeleGate()
 {
@@ -13,6 +14,6 @@ AppDeleGate::~AppDeleGate()
 
 void AppDeleGate::applicationDiaFinishLaunching()
 {
-	cout << "做自己的游戏业务" << endl;
-
+	UserGuideScene* scene = new UserGuideScene();
+	Director::getInstance()->runWithScene(scene);
 }
